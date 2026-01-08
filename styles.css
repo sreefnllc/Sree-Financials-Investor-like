@@ -438,4 +438,39 @@ footer{
 .contact-bg .section-sub{
   color:#405b6d;
 }
+/* FORCE illustration to show on contact page */
+.contact-split{
+  display:grid !important;
+  grid-template-columns: 360px 1fr !important;
+  gap:22px !important;
+  align-items:center !important;
+}
+
+.contact-split .illus{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:260px !important;
+  background:#fff !important;
+  border:1px solid var(--border) !important;
+  border-radius:var(--radius) !important;
+  padding:14px !important;
+  overflow:visible !important;
+}
+
+.contact-split .illus img{
+  width:100% !important;
+  max-width:320px !important;
+  height:auto !important;
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+@media (max-width: 920px){
+  .contact-split{
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
