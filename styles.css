@@ -331,3 +331,34 @@ footer{
   .site-search{min-width:100%; max-width:none; flex:1 1 100%;}
   .search-panel{top:52px;}
 }
+/* --- Contact Form --- */
+form.box{
+  max-width:520px;
+}
+
+.form-row{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:14px;
+}
+
+.form-row label{
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.form-row input,
+.form-row select{
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  font-size:14.5px;
+}
+
+.form-row input:focus,
+.form-row select:focus{
+  outline:none;
+  border-color:#9cc3ff;
+  box-shadow:0 0 0 4px rgba(26,115,232,.12);
+}
+
