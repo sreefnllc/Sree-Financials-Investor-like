@@ -331,28 +331,32 @@ footer{
   .site-search{min-width:100%; max-width:none; flex:1 1 100%;}
   .search-panel{top:52px;}
 }
-/* --- Contact Form --- */
+/* --- Contact Form (Investor.gov-like) --- */
 form.box{
-  max-width:520px;
+  max-width: 640px;
 }
 
 .form-row{
-  display:flex;
-  flex-direction:column;
-  margin-bottom:14px;
+  display:block;
+  margin-bottom: 14px;
 }
 
 .form-row label{
-  font-weight:700;
+  display:block;
+  font-weight:800;
   margin-bottom:6px;
+  color: var(--ink);
 }
 
 .form-row input,
 .form-row select{
-  padding:10px 12px;
-  border-radius:10px;
+  width:100%;
+  max-width:100%;
+  padding:12px 12px;
+  border-radius:12px;
   border:1px solid var(--border);
-  font-size:14.5px;
+  font-size:15px;
+  background:#fff;
 }
 
 .form-row input:focus,
@@ -361,4 +365,14 @@ form.box{
   border-color:#9cc3ff;
   box-shadow:0 0 0 4px rgba(26,115,232,.12);
 }
+
+form.box button.btn{
+  margin-top: 8px;
+}
+
+/* Optional: make the whole form box look nicer */
+form.box{
+  background:#fff;
+}
+
 
