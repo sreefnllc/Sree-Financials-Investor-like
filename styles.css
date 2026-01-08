@@ -331,27 +331,63 @@ footer{
   .site-search{min-width:100%; max-width:none; flex:1 1 100%;}
   .search-panel{top:52px;}
 }
-/* --- Contact Form (Investor.gov-like) --- */
-form.box{
-  max-width: 640px;
+
+/* --- Contact form with illustration (horizontal layout) --- */
+.contact-split{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;   /* image | form */
+  gap:22px;
+  align-items:center;
+  padding:22px;
+}
+
+.contact-split .illus{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact-split .illus img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  display:block;
+}
+
+.contact-split .form-wrap{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px 14px;
 }
 
 .form-row{
-  display:block;
-  margin-bottom: 14px;
+  display:flex;
+  flex-direction:column;
+}
+
+.form-row.full{
+  grid-column: 1 / -1;
 }
 
 .form-row label{
-  display:block;
   font-weight:800;
   margin-bottom:6px;
-  color: var(--ink);
 }
 
 .form-row input,
 .form-row select{
   width:100%;
-  max-width:100%;
   padding:12px 12px;
   border-radius:12px;
   border:1px solid var(--border);
@@ -366,13 +402,18 @@ form.box{
   box-shadow:0 0 0 4px rgba(26,115,232,.12);
 }
 
-form.box button.btn{
-  margin-top: 8px;
+.form-actions{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
-/* Optional: make the whole form box look nicer */
-form.box{
-  background:#fff;
+@media (max-width: 920px){
+  .contact-split{
+    grid-template-columns: 1fr;   /* stack on mobile */
+  }
+  .form-grid{
+    grid-template-columns: 1fr;
+  }
 }
-
-
