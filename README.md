@@ -1,1 +1,0 @@
-# Sree-Financials-Investor-like
