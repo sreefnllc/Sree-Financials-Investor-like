@@ -417,3 +417,25 @@ footer{
     grid-template-columns: 1fr;
   }
 }
+/* --- Light teal background for contact section --- */
+.contact-bg{
+  background:#e9f6f7;          /* light teal */
+  border-radius:20px;
+  padding:26px;
+  margin-top:24px;
+}
+
+/* Optional: tighten spacing inside */
+.contact-bg .box{
+  background:transparent;
+  border:none;
+}
+
+/* Keep text readable */
+.contact-bg .section-title{
+  color:#0b1f33;
+}
+.contact-bg .section-sub{
+  color:#405b6d;
+}
+
