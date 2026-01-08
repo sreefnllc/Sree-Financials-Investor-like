@@ -85,6 +85,61 @@
         </div>
       </div>
     </section>
+<section>
+  <h1 class="section-title" style="font-size:28px;">Contact Us</h1>
+  <p class="section-sub">
+    Submit your details below and we’ll get back to you shortly.
+  </p>
+
+  <form 
+    action="https://formspree.io/f/xwvpgngz"
+    method="POST"
+    class="box"
+  >
+
+    <div class="form-row">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-row">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-row">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone">
+    </div>
+
+    <div class="form-row">
+      <label for="interest">Business Interest</label>
+      <select id="interest" name="business_interest" required>
+        <option value="">Select an option</option>
+        <option>Financial Planning</option>
+        <option>Investment Management</option>
+        <option>Retirement Planning</option>
+        <option>Wealth Management</option>
+        <option>Health Insurance</option>
+        <option>Medicare Planning</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="reference">Reference (if any)</label>
+      <input type="text" id="reference" name="reference">
+    </div>
+
+    <!-- Formspree spam protection -->
+    <input type="hidden" name="_subject" value="New Contact Request - Sree Financials LLC">
+    <input type="hidden" name="_template" value="table">
+
+    <button type="submit" class="btn btn-primary">
+      Submit Information
+    </button>
+  </form>
+</section>
 
     <section>
       <h2 class="section-title">Important disclosure</h2>
@@ -105,3 +160,4 @@
 <script src="search.js"></script>
 </body>
 </html>
+
