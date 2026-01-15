@@ -472,5 +472,18 @@ footer{
     grid-template-columns: 1fr !important;
   }
 }
+/* --- Calendly embed --- */
+.calendly-box{
+  padding: 0;
+  overflow: hidden;
+}
+
+.calendly-box iframe{
+  display:block;
+  border:0;
+  width:100%;
+}
+
+
 
 
