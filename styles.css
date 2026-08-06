@@ -483,7 +483,139 @@ footer{
   border:0;
   width:100%;
 }
+/* ---------- Our Partners ---------- */
 
+.partners-section{
+  padding:44px 0;
+  overflow:hidden;
+}
+
+.partners-heading{
+  margin-bottom:22px;
+}
+
+.partners-slider{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  padding:14px 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  background:#fff;
+}
+
+/* Soft fade at the left and right edges */
+.partners-slider::before,
+.partners-slider::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:80px;
+  z-index:2;
+  pointer-events:none;
+}
+
+.partners-slider::before{
+  left:0;
+  background:linear-gradient(
+    to right,
+    #fff 10%,
+    rgba(255,255,255,0)
+  );
+}
+
+.partners-slider::after{
+  right:0;
+  background:linear-gradient(
+    to left,
+    #fff 10%,
+    rgba(255,255,255,0)
+  );
+}
+
+.partners-track{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  width:max-content;
+  animation:partners-scroll 48s linear infinite;
+}
+
+.partners-slider:hover .partners-track{
+  animation-play-state:paused;
+}
+
+.partner-logo{
+  width:220px;
+  height:112px;
+  flex:0 0 220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+.partner-logo img{
+  display:block;
+  max-width:100%;
+  max-height:72px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+
+.partner-disclosure{
+  margin:14px 0 0;
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.55;
+}
+
+@keyframes partners-scroll{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(calc(-50% - 9px));
+  }
+}
+
+/* Respect accessibility settings */
+@media (prefers-reduced-motion: reduce){
+  .partners-track{
+    animation:none;
+    flex-wrap:wrap;
+    width:100%;
+    justify-content:center;
+  }
+
+  .partners-slider{
+    overflow:visible;
+  }
+}
+
+@media (max-width:720px){
+  .partners-slider::before,
+  .partners-slider::after{
+    width:34px;
+  }
+
+  .partner-logo{
+    width:175px;
+    height:94px;
+    flex-basis:175px;
+    padding:12px;
+  }
+
+  .partner-logo img{
+    max-height:58px;
+  }
+}
 
 
 
